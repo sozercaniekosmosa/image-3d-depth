@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>My Three.js Scene</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        canvas {
+            position: fixed;
+            z-index: -1;
+            top: calc(min(0px, 50vh - 50vw * 1080 / 1920));
+            left: calc(min(0px, 50vw - 50vh / 1080 * 1920));
+            display: block;
+        }
+
+        #cover {
+            color: red;
+            text-align: center;
+            padding-top: 40vh;
+            font-size: 20vh;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #info {
+            position: fixed;
+            color: red;
+            text-align: left;
+            font-size: 1vw;
+        }
+    </style>
+<!--    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>-->
+<!--    <script type="importmap">-->
+<!--      {-->
+<!--        "imports": {-->
+<!--          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",-->
+<!--          "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"-->
+<!--        }-->
+<!--      }-->
+<!--    </script>-->
+    <script type="module">
+        // Polyfill
+        Number.prototype.clamp = function (min, max) {
+          return Math.min(Math.max(this, min), max);
+        };
+        
+        // window.info = function(str) {
+        //   const p = document.createElement('p');
+        //   p.textContent = str;
+        //   document.getElementById('info').appendChild(p);
+        //   window.setTimeout(() => p.remove(), 1000 * 10);
+        // }
+        // window.info("Starting...");
+        
+    </script>
+    
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+
+<!--    <div id="cover">CLICK TO PLAY</div>-->
+<!--    <div id="info"></div>-->
+
+</body>
+
+</html>
